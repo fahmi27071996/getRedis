@@ -16,7 +16,8 @@ host=hostname,
 port=port,
 #password=password
 )
-
-getData = r.hget('pms6','voltage')
-
-print(getData)
+for x in range(1,25):
+    
+    getV = r.hget('pms'+str(x),'voltage')
+    getA = r.hget('pms'+str(x),'current')
+    getD = r.hget('pms'+str(x),'dmos_state')
