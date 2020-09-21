@@ -20,4 +20,5 @@ for x in range(1,25):
     getV = r.hget('pms'+str(x),'voltage')
     getA = r.hget('pms'+str(x),'current')
     getD = r.hget('pms'+str(x),'dmos_state')
-    print("pack " + str(x) +" "+ str(getV) + " " + str(getA)+ " " + str(getD))
+    getC = r.hget('pms'+str(x),'cmos_state')
+    print("pack " + str(x) +" "+ str(getV) + " " + str(getA)+ " " + str(getD)+ " " + str(getC))
