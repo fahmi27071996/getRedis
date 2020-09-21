@@ -16,6 +16,7 @@ host=hostname,
 port=port,
 #password=password
 )
+print("pulau macan")
 for x in range(1,25):
     getV = r.hget('pms'+str(x),'voltage')
     getA = r.hget('pms'+str(x),'current')
